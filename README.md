@@ -20,6 +20,13 @@ This is a weather notifier application which retrieves real-time data from AccuW
 9) Go back to the Rust code and replace the city with the Location key.
 10) Run the code using `cargo run` command.
 
+## How does it appear on your Screen?
+
+After running `cargo run` command, the app starts getting the data from AccuWeather and then a notification pops up on your screen seen as below.
+
+![image](https://github.com/user-attachments/assets/e8f17790-3dbd-4b2f-8a72-e73c7a55859d)
+
+
 ### How to customize the App?
 
 You can always change the city that you chose with changing the Location key in the code and the time interval within which you want to get notifications from the app. 
