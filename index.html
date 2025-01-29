@@ -47,19 +47,24 @@
             line-height: 1.6;
             color: #555;
         }
-        .download-button {
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Space between buttons */
+        }
+        .button-container a {
             padding: 12px 24px;
             font-size: 1.1rem;
             color: white;
-            background: #72d5cd;
-            text-decoration: none; 
+            background: #003874;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             transition: background 0.3s;
+            text-decoration: none;
         }
-        .download-button:hover {
-            background: #72c383;
+        .button-container a:hover {
+            background: #4e8fd5;
         }
         .scrollable-content {
             margin-top: 30px;
@@ -88,9 +93,14 @@
         <h1>Weather Notifier App</h1>
         <p>Get real-time weather alerts and never be caught off guard. Stay prepared for any forecast with our smart notifications.</p>
         
-        <a href="https://github.com/ParnianTj/Weather-App/raw/refs/heads/main/weather-notifier.exe" class="download-button">
-            Download Binary
-        </a>
+        <div class="button-container">
+            <a href="https://github.com/ParnianTj/Weather-App/raw/refs/heads/main/weather-notifier.exe">
+                Download Binary
+            </a>
+            <a href="https://github.com/ParnianTj/Weather-App">
+                Visit Github
+            </a>
+        </div>
 
         <!-- Scrollable Content Section -->
         <div class="scrollable-content">
