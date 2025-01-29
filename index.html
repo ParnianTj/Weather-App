@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Notifier App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            background: url('https://www.pixelstalk.net/wp-content/uploads/2016/07/Weather-Desktop-Image-Download-Free.jpg') no-repeat center center/cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #333;
+            overflow-y: auto; /* Enable scrolling */
+        }
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 90%;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .cta-button {
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            color: white;
+            background: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-bottom: 20px;
+        }
+        .cta-button:hover {
+            background: #0056b3;
+        }
+        .download-button {
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            color: white;
+            background: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .download-button:hover {
+            background: #218838;
+        }
+        .scrollable-content {
+            margin-top: 30px;
+            text-align: left;
+        }
+        .scrollable-content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        .scrollable-content ul li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .scrollable-content h2 {
+            margin-top: 20px;
+            color: #007bff;
+        }
+        .scrollable-content p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Weather Notifier App</h1>
+        <p>Get real-time weather alerts and never be caught off guard. Stay prepared for any forecast with our smart notifications.</p>
+        
+        <button class="download-button">Download Now</button>
+
+        <!-- Scrollable Content Section -->
+        <div class="scrollable-content">
+            <h2>Why Choose Weather Notifier App?</h2>
+            <p>Powered by the <strong>AccuWeather API</strong>, we deliver <strong>real-time, hyper-accurate weather updates</strong> right to your fingertips. Here’s what makes us your ultimate weather companion:</p>
+            <ul>
+                <li><strong>Severe Weather Alerts</strong>: Never be caught off guard again! We send instant notifications for severe weather conditions like <strong>storms, hail, tornadoes, unhealthy air quality, or high UV index</strong>.</li>
+                <li><strong>Real-Time Weather Updates</strong>: Thanks to the <strong>AccuWeather API</strong>, you’ll always have access to the most reliable and up-to-date weather information.</li>
+                <li><strong>Smart Notifications</strong>: Tired of constantly checking your weather app? We proactively notify you about significant weather changes, so you can focus on your day.</li>
+            </ul>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>Severe Weather Alerts</strong>: Get notified about storms, hail, tornadoes, and more.</li>
+                <li><strong>Health & Safety Warnings</strong>: Stay informed about unhealthy air quality and high UV index conditions.</li>
+                <li><strong>Hyper-Local Forecasts</strong>: Accurate, real-time weather updates tailored to your location.</li>
+            </ul>
+
+            <h2>Never Worry About the Weather Again</h2>
+            <p>With <strong>Weather Notifier App</strong>, you’ll always be one step ahead. Whether you’re planning a weekend getaway, commuting to work, or just stepping out for a quick errand, our app ensures you’re prepared for whatever the weather brings.</p>
+            <p>Download <strong>Weather Notifier App</strong> today and experience the peace of mind that comes with being weather-ready!</p>
+        </div>
+    </div>
+</body>
+</html>
