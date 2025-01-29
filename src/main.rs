@@ -8,25 +8,25 @@ use tokio;
 
 #[derive(Deserialize, Debug, Clone)]
 struct WeatherData {
-    WeatherText: String,
-    Temperature: Temperature,
-    UVIndex: u8,
-    AirQuality: Option<AirQuality>,
+    weather_text: String,
+    temperature: Temperature,
+    uv_index: u8,
+    air_quality: Option<AirQuality>,
 }
 
 #[derive(Deserialize, Debug, Clone)]
 struct Temperature {
-    Metric: Metric,
+    metric: Metric,
 }
 
 #[derive(Deserialize, Debug, Clone)]
 struct Metric {
-    Value: f32,
+    value: f32,
 }
 
 #[derive(Deserialize, Debug, Clone)]
 struct AirQuality {
-    Category: String,
+    category: String,
 }
 
 fn get_api_key() -> String {
@@ -45,30 +45,30 @@ async fn fetch_weather(api_key: &str, location_key: &str) -> Result<WeatherData,
 
 fn is_severe_weather(weather: &WeatherData) -> bool {
     let severe_conditions = ["Storm", "Hail", "Tornado"];
-    severe_conditions.contains(&weather.WeatherText.as_str())
+    severe_conditions.contains(&weather.weather_text.as_str())
 }
 
 fn is_high_uv(weather: &WeatherData) -> bool {
-    weather.UVIndex >= 8
+    weather.uv_index >= 8
 }
 
 fn is_polluted_air(weather: &WeatherData) -> bool {
-    if let Some(air_quality) = &weather.AirQuality {
-        air_quality.Category == "Unhealthy"
+    if let Some(air_quality) = &weather.air_quality {
+        air_quality.category == "Unhealthy"
     } else {
         false
     }
 }
 
 fn send_notification(weather: &WeatherData) {
-    let air_quality_message = match &weather.AirQuality {
-        Some(air_quality) => format!("Air Quality: {}", air_quality.Category),
+    let air_quality_message = match &weather.air_quality {
+        Some(air_quality) => format!("Air Quality: {}", air_quality.category),
         None => "Air Quality: Not available".to_string(),
     };
 
     let notification_message = format!(
         "Weather: {}\nTemperature: {}°C\nUV Index: {}\n{}",
-        weather.WeatherText, weather.Temperature.Metric.Value, weather.UVIndex, air_quality_message
+        weather.weather_text, weather.temperature.metric.value, weather.uv_index, air_quality_message
     );
 
     Notification::new()
