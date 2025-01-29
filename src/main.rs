@@ -110,7 +110,7 @@ async fn run_notifier() {
             }
         }
         println!("Waiting for the next check...");
-        tokio::time::sleep(Duration::from_secs(300)).await; // Checks every 5 minutes
+        tokio::time::sleep(Duration::from_secs(120)).await; // Checks every 2 minutes
     }
 }
 
