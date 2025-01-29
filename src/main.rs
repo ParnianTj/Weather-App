@@ -80,7 +80,7 @@ fn send_notification(weather: &WeatherData) {
 
 async fn run_notifier() {
     let api_key = get_api_key();
-    let location_key = "178086"; // Replaced with actual key for Munich, Germany
+    let location_key = "311159"; // Replaced with actual key for Munich, Germany
     
     println!("Starting weather notifier...");
     
