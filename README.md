@@ -7,7 +7,7 @@ This is a weather notifier application which retrieves real-time data from AccuW
 - AccuWeather Account (https://developer.accuweather.com/user/register)
 - Phlorin API Connecter (https://phlorin.com/api-connector/)
 
-### How to Run this App?
+## How to Run this App?
 
 1) Search for AccuWeather platform.
 2) Create an account and get your API key.
@@ -20,7 +20,7 @@ This is a weather notifier application which retrieves real-time data from AccuW
 9) Go back to the Rust code and replace the city with the Location key.
 10) Run the code using `cargo run` command.
 
-## How to customize the App?
+### How to customize the App?
 
 You can always change the city that you chose with changing the Location key in the code and the time interval within which you want to get notifications from the app. 
 
