@@ -24,4 +24,4 @@ This is a weather notifier application which retrieves real-time data from AccuW
 
 You can always change the city that you chose with changing the Location key in the code and the time interval within which you want to get notifications from the app. 
 
-By default, the app is set on Munich, Germany and a time interval of 5 minutes.
+By default, the app is set on Munich, Germany and a time interval of 2 minutes.
